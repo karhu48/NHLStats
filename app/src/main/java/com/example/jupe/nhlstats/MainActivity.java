@@ -9,6 +9,11 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    //http://live.nhl.com/GameData/SeasonSchedule-20172018.json
+    //https://api.mysportsfeeds.com/v1.1/sample/pull/nhl/2016-2017-regular/daily_player_stats.json?fordate=20161015&
+    //https://www.mysportsfeeds.com/data-feeds/nhl/feedlist/
+    
     Button button;
 
     @Override

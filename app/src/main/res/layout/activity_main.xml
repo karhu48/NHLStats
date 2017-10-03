@@ -7,18 +7,18 @@ android:layout_height="match_parent"
 tools:context="com.example.jupe.nhlstats.MainActivity">
 
     <LinearLayout
-        android:layout_width="362dp"
-        android:layout_height="494dp"
+        android:layout_width="369dp"
+        android:layout_height="493dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="9dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="9dp">
 
         <Button
-            android:id="@+id/buttonStats"
+            android:id="@+id/buttonGames"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Stats" />
+            android:text="Games" />
 
         <Button
             android:id="@+id/buttonBets"

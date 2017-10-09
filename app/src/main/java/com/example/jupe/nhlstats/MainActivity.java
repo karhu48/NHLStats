@@ -12,9 +12,10 @@ public class MainActivity extends AppCompatActivity {
 
     //http://live.nhl.com/GameData/SeasonSchedule-20172018.json
     //https://api.mysportsfeeds.com/v1.1/sample/pull/nhl/2016-2017-regular/daily_player_stats.json?fordate=20161015&
-    //https://www.mysportsfeeds.com/data-feeds/nhl/feedlist/
+        //https://www.mysportsfeeds.com/data-feeds/nhl/feedlist/
     
     Button button;
+    Button button1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +24,21 @@ public class MainActivity extends AppCompatActivity {
 
         button = (Button) findViewById(R.id.buttonGames);
 
-        button.setOnClickListener(new View.OnClickListener() {
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View arg0) {
                 Intent myIntent = new Intent(MainActivity.this, StatsActivity.class);
                 startActivity(myIntent);
+            }
+        });
+        button1 = (Button) findViewById(R.id.buttonBets);
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent myIntent1 = new Intent(MainActivity.this, betsActivity.class);
+                startActivity(myIntent1);
             }
         });
     }

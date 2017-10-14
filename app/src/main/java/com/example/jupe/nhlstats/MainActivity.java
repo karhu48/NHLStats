@@ -1,5 +1,6 @@
 package com.example.jupe.nhlstats;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,31 +22,32 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        button = (Button) findViewById(R.id.buttonGames);
-
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Intent myIntent = new Intent(MainActivity.this, StatsActivity.class);
-                startActivity(myIntent);
-            }
-        });
-        button1 = (Button) findViewById(R.id.buttonBets);
-
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Intent myIntent1 = new Intent(MainActivity.this, betsActivity.class);
-                startActivity(myIntent1);
-            }
-        });
+        addListenerOnButton();
     }
+        public void addListenerOnButton() {
+            final Context context = this;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        return true;
-    }
+            button = (Button) findViewById(R.id.buttonGames);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View arg0) {
+                    Intent myIntent = new Intent(MainActivity.this, StatsActivity.class);
+                    startActivity(myIntent);
+                }
+            });
+            button1 = (Button) findViewById(R.id.buttonBets);
+            button1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View arg0) {
+                    Intent myIntent1 = new Intent(MainActivity.this, betsActivity.class);
+                    startActivity(myIntent1);
+                }
+            });
+
+        }
+           /* @Override
+            public boolean onCreateOptionsMenu (Menu menu){
+                getMenuInflater().inflate(R.menu.activity_main, menu);
+                return true;
+            }*/
 }

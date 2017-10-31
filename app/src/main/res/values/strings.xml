@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NHLStats</string>
+    <string name="button">Get matches</string>
 </resources>
